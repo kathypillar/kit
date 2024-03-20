@@ -1,0 +1,5 @@
+This is a basic git wrapper(and some other things), this was mainly just created so I could be lazy.
+
+Only works with linux, make sure you have git and g++.
+
+Do make install to install.
