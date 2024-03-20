@@ -7,7 +7,7 @@
 cat /usr/share/kit/kitrc
 ;edit
 =| nano
-%| /usr/share/kit/kitrc
+sudo %| /usr/share/kit/kitrc
 :all
 git add -A && git commit
 :lazy
