@@ -18,7 +18,6 @@ string lookup(char* cmd) {
 		if(str[0]==':'&&str.substr(1,str.length()-1)==cmd)
 			b=0;
 	}
-	str="git "+str;
 	return str;
 }
 
