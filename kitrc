@@ -1,7 +1,8 @@
 //simple commands start with ':' and then the git command you want to exec is on the following line. 
-//Commands with variables start with ';' and the next line(s) start with '%'.
-//'%n' clarifies needed variables, '%|' clarifies optional variables(| clarifies the default state), and '%c' clarifies some sort of constant.
-//Valid constants: %c dir(home dir for git)
+//Commands with variables start with ';' and the next line(s) start with '='.
+//'=n' declares needed variables, '=|' declares optional variables(| clarifies the default state), and '=c' clarifies some sort of constant.
+//Valid constants: =c dir(home dir for git)
+//vars are represented with '%'
 //this list is dynamic and is stored at /usr/share/kit/kitrc feel free to edit.
 :help
 cat /usr/share/kit/kitrc
@@ -20,3 +21,6 @@ git push
 =n file
 =c dir
 echo %n >> %c.gitignore
+;rinit
+=n address
+git remote add origin %n && git branch -M main && git push -u origin main
