@@ -2,12 +2,12 @@
 //Commands with variables start with ';' and the next line(s) start with '%'.
 //'%n' clarifies needed variables, '%|' clarifies optional variables(| clarifies the default state), and '%c' clarifies some sort of constant.
 //Valid constants: %c dir(home dir for git)
-//this list is dynamic and is stored at ~/.kit/kitrc feel free to edit.
+//this list is dynamic and is stored at /usr/share/kit/kitrc feel free to edit.
 :help
-cat ~/.kit/kitrc
+cat /usr/share/kit/kitrc
 ;edit
 =| nano
-%| ~/.kit/kitrc
+%| /usr/share/kit/kitrc
 :all
 git add -A && git commit
 :lazy
