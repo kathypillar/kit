@@ -6,8 +6,7 @@
 
 using namespace std;
 
-//const string IN_FILE = "~/.kit/kitrc";
-const string IN_FILE = "kitrc";
+const string IN_FILE = "~/.kit/kitrc";
 
 string lookup(char** cmd) {
 	ifstream file;
