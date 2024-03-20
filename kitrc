@@ -1,0 +1,9 @@
+//commands start with ':' and then the git command you want to exec is on the following line
+:all
+add -A && git commit
+:lazy
+add -A && git commit && git push
+:yank
+stash && git pull
+:shove
+push
