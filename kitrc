@@ -1,4 +1,13 @@
-//commands start with ':' and then the git command you want to exec is on the following line
+//simple commands start with ':' and then the git command you want to exec is on the following line. 
+//Commands with variables start with ';' and the next line(s) start with '%'.
+//'%n' clarifies needed variables, '%|' clarifies optional variables(| clarifies the default state), and '%c' clarifies some sort of constant.
+//Valid constants: %c dir(home dir for git)
+//this list is dynamic and is stored at ~/.kit/kitrc feel free to edit.
+:help
+cat ~/.kit/kitrc
+;edit
+=| nano
+%| ~/.kit/kitrc
 :all
 git add -A && git commit
 :lazy
@@ -7,3 +16,7 @@ git add -A && git commit && git push
 git stash && git pull
 :shove
 git push
+;ignore
+=n file
+=c dir
+echo %n >> %c.gitignore
