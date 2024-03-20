@@ -12,11 +12,11 @@ const string IN_FILE = "kitrc";
 string lookup(char** cmd) {
 	ifstream file;
 	file.open(IN_FILE);
-	string str;
+	string str ="I am the very model of a modern major general"; //I just need it to be not "" lol
 	int b=0;
 	int numVars=0;
 	string vars[10]; //if you need more than ten variables what are you doing buddy
-	while ((!b)) {
+	while (str!=""&&(!b)) {
 		getline(file,str);
 		if(str[0]==':'&&str.substr(1,str.length()-1)==cmd[1]) {
 			b=1;
