@@ -70,15 +70,10 @@ string lookup(char** cmd) {
 	return str;
 }
 
-void help() {
-	return;
-}
-
 int main(int argN, char** args) {
 	if (args[1]==nullptr) {
 		cout << "error: argument needed" << endl;
 		return 0;
 	}
-//	cout << lookup(args) << endl;
 	system(lookup(args).c_str());
 }

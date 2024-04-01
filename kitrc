@@ -7,7 +7,7 @@
 :help
 cat /usr/share/kit/kitrc
 ;edit
-=| nano
+=| nano text editor
 sudo %| /usr/share/kit/kitrc
 :all
 git add -A && git commit
