@@ -8,7 +8,7 @@ using namespace std;
 
 const string IN_FILE = "/usr/share/kit/kitrc";
 
-string lookup(char** cmd) {
+string lookup(char** cmd,int cmdN) {
 	ifstream file;
 	file.open(IN_FILE);
 	string str ="I am the very model of a modern major general"; //I just need it to be not "" lol
@@ -66,6 +66,8 @@ string lookup(char** cmd) {
 	if (str!="")
 		return str;
 	str=cmd[1];
+	for(int i=2;i<cmdN;i++)
+		str=str+" "+cmd[i];
 	str="git "+str;
 	return str;
 }
@@ -75,5 +77,6 @@ int main(int argN, char** args) {
 		cout << "error: argument needed" << endl;
 		return 0;
 	}
-	system(lookup(args).c_str());
+	//cout << (lookup(args,argN).c_str()) << endl;
+	system(lookup(args,argN).c_str());
 }

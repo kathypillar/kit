@@ -3,20 +3,30 @@
 //'=n' declares needed variables, '=|' declares optional variables(| clarifies the default state), and '=c' clarifies some sort of constant.
 //Valid constants: =c dir(home dir for git)
 //vars are represented with '%'
-//this list is dynamic and is stored at /usr/share/kit/kitrc feel free to edit.
+//this list is dynamic and is stored at /usr/share/kit/kitrc feel free to edit or run kit edit to edit it easily.
 :help
 cat /usr/share/kit/kitrc
 ;edit
-=| nano text editor
+=| nano
 sudo %| /usr/share/kit/kitrc
 :all
 git add -A && git commit
-:lazy
+;lazy
+=| this_user_is_so_lazy_they_aren't_even_adding_a_commit_message
+git add -A && git commit -m %| && git push
+;squash
+=n bug explanation
+git add -A && git commit -m [Bug_Fix]:%n && git push
+;up
+=n feature explanation
+git add -A && git commit -m [Feature_Added]:%n && git push
+;re
+=n refactor explanation
+git add -A && git commit -m [Refactor]:%n && git push
+:shove
 git add -A && git commit && git push
 :yank
 git stash && git pull
-:shove
-git push
 ;ignore
 =n file
 =c dir
