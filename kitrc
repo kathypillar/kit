@@ -34,3 +34,6 @@ echo %n >> %c.gitignore
 ;rinit
 =n address
 git remote add origin %n && git branch -M main && git push -u origin main
+;test
+=n name
+echo %n
