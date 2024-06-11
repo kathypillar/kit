@@ -16,13 +16,13 @@ git add -A && git commit
 git add -A && git commit -m "%|" && git push
 ;squash
 =n bug explanation
-git add -A && git commit -m "[Bug_Fix]:%n" && git push
+git add -A && git commit -m "[Bug_Fix]: %n" && git push
 ;up
 =n feature explanation
-git add -A && git commit -m "[Feature_Added]:%n" && git push
+git add -A && git commit -m "[Feature_Added]: %n" && git push
 ;re
 =n refactor explanation
-git add -A && git commit -m "[Refactor]:%n" && git push
+git add -A && git commit -m "[Refactor]: %n" && git push
 :shove
 git add -A && git commit && git push
 :yank
