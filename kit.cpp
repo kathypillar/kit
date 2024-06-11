@@ -11,7 +11,7 @@ const string IN_FILE = "/usr/share/kit/kitrc";
 string lookup(char** cmd,int cmdN) {
 	ifstream file;
 	file.open(IN_FILE);
-	string str ="I am the very model of a modern major general"; //I just need it to be not "" lol
+	string str = "I am the very model of a modern major general"; //I just need it to be not "" lol
 	int b=0;
 	int numVars=0;
 	string vars[10]; //if you need more than ten variables what are you doing buddy
