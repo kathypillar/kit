@@ -77,6 +77,5 @@ int main(int argN, char** args) {
 		cout << "error: argument needed" << endl;
 		return 0;
 	}
-	//cout << (lookup(args,argN).c_str()) << endl;
 	system(lookup(args,argN).c_str());
 }
