@@ -12,17 +12,17 @@ sudo %| /usr/share/kit/kitrc
 :all
 git add -A && git commit
 ;lazy
-=| this_user_is_so_lazy_they_aren't_even_adding_a_commit_message
-git add -A && git commit -m %| && git push
+=| this user is so lazy they aren't even adding a commit message
+git add -A && git commit -m "%|" && git push
 ;squash
 =n bug explanation
-git add -A && git commit -m [Bug_Fix]:%n && git push
+git add -A && git commit -m "[Bug_Fix]:%n" && git push
 ;up
 =n feature explanation
-git add -A && git commit -m [Feature_Added]:%n && git push
+git add -A && git commit -m "[Feature_Added]:%n" && git push
 ;re
 =n refactor explanation
-git add -A && git commit -m [Refactor]:%n && git push
+git add -A && git commit -m "[Refactor]:%n" && git push
 :shove
 git add -A && git commit && git push
 :yank
@@ -34,6 +34,3 @@ echo %n >> %c.gitignore
 ;rinit
 =n address
 git remote add origin %n && git branch -M main && git push -u origin main
-;test
-=n name
-echo %n
