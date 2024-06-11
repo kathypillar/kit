@@ -1,5 +1,5 @@
 This is a basic git wrapper(and some other things), this was mainly just created so I could be lazy.
 
-Only works with linux, make sure you have git and g++.
+Only works with linux, make sure you have git and g++. I'm not adding checks for those because I don't care.
 
 Do make install to install.
